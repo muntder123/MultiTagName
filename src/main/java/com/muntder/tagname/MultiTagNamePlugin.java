@@ -2,6 +2,7 @@ package com.muntder.tagname;
 
 import com.muntder.tagname.api.TagNameAPI;
 import com.muntder.tagname.api.registry.ListenerRegistry;
+import com.muntder.tagname.core.implementation.TagAPIProvider;
 import com.muntder.tagname.core.implementation.registry.ListenerRegistryProvider;
 import com.muntder.tagname.listeners.PlayerTagDeathListener;
 import com.muntder.tagname.listeners.PlayerTagInitializer;
@@ -18,6 +19,8 @@ public class MultiTagNamePlugin extends JavaPlugin {
         instance = this;
         saveDefaultConfig();
         saveConfig();
+
+        new TagAPIProvider(this);
 
         ListenerRegistry listenerRegistry = new ListenerRegistryProvider(this);
         listenerRegistry.register(
