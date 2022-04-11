@@ -1,5 +1,5 @@
-name: MutliTagName
+name: MultiTagName
 version: '${project.version}'
 author: killer123451 , aka m_iq
-main: com.muntder.tagname.LootSystemPlugin
+main: com.muntder.tagname.MultiTagNamePlugin
 description: a plugin that add a custom msg above player head
